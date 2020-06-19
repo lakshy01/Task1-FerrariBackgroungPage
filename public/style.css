@@ -1,0 +1,128 @@
+
+html, body {
+    background-image: url('./FerrariBackground.jpg');
+    height: 100%;
+    width: 100%;
+    margin: 0%;
+}
+
+.container {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 0%;
+}
+
+.logo {
+    padding-bottom: 2px;
+}
+
+p {
+    position: relative;
+    min-width: 45%;
+    margin-top: 20px;
+    margin-left: 25px;
+    font-size: 30px;
+    color: rgba(206, 204, 204, 0.973);
+    font-weight: 1000;
+    border-bottom: 5px solid yellow;
+}
+
+.nav {
+    text-align: right;
+    height: 70px;
+    line-height: 70px;
+}
+
+.menu a {
+    clear: right;
+    text-decoration: none;
+    color: gray;
+    margin: 0 10px;
+}
+
+label {
+    margin: 0 40px 0 0;
+    font-size: 28px;
+    line-height: 70px;
+    display: none;
+    width: 26px;
+    float: right;
+}
+
+#toggle {
+    display: none;
+}
+
+@media only screen and (max-width: 500px){
+    label {
+        margin-top: 20px;
+        font-size: 40px;
+        display: block;
+        cursor: pointer;
+    }
+    .menu {
+        text-align: center;
+        display: none;
+    }
+    .menu a {
+        display: block;
+    }
+
+    #toggle:checked + .menu{
+        display: block;
+    }
+    .logo{
+        min-width: 48%;
+    }
+}
+
+.text {
+    color: rgba(206, 204, 204, 0.973);
+    font-weight: bolder;
+    margin-top: 10px;
+    
+}
+
+.text:hover{
+    color: white;
+    font-weight: bolder;
+    font-size: large;
+}
+
+.main-nav {   
+  width: 110vh;   
+  height:45px;
+  position: fixed;
+  color: white;
+  margin-left: 10px;
+  -webkit-transform-origin: left top;
+  -webkit-transform:rotate(-90deg) translateX(-100%);
+}
+
+.textvert {
+    font-weight: bold;
+    font-size: x-large;
+    margin-bottom: 20px;
+}
+
+.dash {
+    border-bottom: 5px solid red;
+    padding-bottom: 3px;
+}
+
+#indvid {
+    border-bottom: 5px solid yellow;
+    padding-bottom: 3px;
+}
+
+ul.nav1 li {    
+    margin-right:20px;
+    float:right;
+    height:100%;
+    line-height:45px;
+}
+
+li {
+    list-style-type: none;
+}

@@ -1,9 +1,18 @@
-
 html, body {
+  width: 100%;  
+  height:100%; 
+  margin: 0; 
+}
+
+.page-container {
+    /* overflow-x: scroll;
+    overflow-y: scroll; */
     background-image: url('./FerrariBackground.jpg');
-    height: 100%;
+    background-position-x: -190px;
+    background-position-y: -50px;
+    height: 100%; 
     width: 100%;
-    margin: 0%;
+    margin: 0;
 }
 
 .container {
@@ -12,6 +21,15 @@ html, body {
     width: 100%;
     margin: 0%;
 }
+
+.main-nav {  
+    width: 94vh;   
+    height:45px;
+    color: white;
+    margin-left: 10px;
+    -webkit-transform-origin: left top;
+    -webkit-transform:rotate(-90deg) translateX(-100%);
+  }
 
 .logo {
     padding-bottom: 2px;
@@ -33,21 +51,21 @@ p {
     height: 70px;
     line-height: 70px;
 }
-
+  
 .menu a {
     clear: right;
     text-decoration: none;
     color: gray;
     margin: 0 10px;
+    margin-top: 25x;
 }
 
 label {
-    margin: 0 40px 0 0;
+    margin: 0 40px 0 100px;
     font-size: 28px;
     line-height: 70px;
     display: none;
     width: 26px;
-    float: right;
 }
 
 #toggle {
@@ -55,49 +73,70 @@ label {
 }
 
 @media only screen and (max-width: 500px){
+    
+    .page-container {
+        background-image: url('./FerrariBackground.jpg');
+        background-position-x: -580px;
+        background-position-y: -85px;
+        overflow-x: scroll;
+        overflow-y: scroll;
+        white-space:nowrap;
+        height: 100%;
+        width: 100%
+    }
+    
+    .logo {
+        margin-top: 25px;
+    }
+
     label {
-        margin-top: 20px;
+        margin: 41px 410px 0 150px;
         font-size: 40px;
         display: block;
         cursor: pointer;
     }
-    .menu {
-        text-align: center;
+    
+    .box {
+        /* text-align: center; */
         display: none;
     }
-    .menu a {
+
+    #toggle:checked + .box {
         display: block;
     }
 
-    #toggle:checked + .menu{
-        display: block;
+    .box {
+        width: 580px;
+        height: 75px;
+        background-color: rgba(0, 0, 0, 0.507);
+        padding: 3px;
+        float: left;
+        position: relative;
     }
-    .logo{
-        min-width: 48%;
+      
+    .box.arrow-top:after {
+        content: " ";
+        position: relative;
+        right: 400px;
+        top: -133px;
+        border-top: none;
+        border-right: 15px solid transparent;
+        border-left: 15px solid transparent;
+        border-bottom: 15px solid rgba(0, 0, 0, 0.507);
     }
+    
 }
 
 .text {
     color: rgba(206, 204, 204, 0.973);
     font-weight: bolder;
     margin-top: 10px;
-    
 }
 
 .text:hover{
     color: white;
     font-weight: bolder;
     font-size: large;
-}
-
-.main-nav {   
-  width: 110vh;   
-  height:45px;
-  position: fixed;
-  color: white;
-  margin-left: 10px;
-  -webkit-transform-origin: left top;
-  -webkit-transform:rotate(-90deg) translateX(-100%);
 }
 
 .textvert {
